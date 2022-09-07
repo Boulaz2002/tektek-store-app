@@ -1,0 +1,147 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+ul{
+  padding: 0;
+  margin: 0;
+}
+li{
+  list-style: none;
+}
+body{
+  background-color: #eee;
+  font-family: "Open Sans", sans-serif;
+}
+.sidebar{
+  z-index: 99;
+  position: fixed;
+  background: #000;
+  width: 300px;
+  height: 100vh;
+  padding: 30px 20px;
+  box-sizing: border-box;
+  transition: width .2s ease-in;
+
+}
+
+.sidebar.inactive{
+  width: 80px;
+}
+
+.sidebar .top-section{
+  position: relative;
+}
+
+.sidebar .top-section .logo{
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.sidebar .top-section .logo img{
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.sidebar .top-section .toggle-button {
+  color: aqua;
+  font-size: 20px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.sidebar.inactive .top-section .toggle-button {
+  color: #000;
+ right: -50px;
+}
+
+.sidebar .main-menu{
+  margin: 30px 0;
+}
+
+.sidebar .main-menu .menu-item{
+  text-decoration: none;
+  color: #eee;
+  font-size: 18px;
+  display: block;
+  font-weight: 600;
+  cursor: pointer;
+  }
+  
+  .sidebar .main-menu .menu-item.inactive .menu-item-name{
+    display: none;
+  }
+
+  .sidebar .main-menu .menu-item.inactive .menu-icon{
+    font-size: 40px;
+    line-height: 50px;
+  }
+  
+  .sidebar .main-menu .menu-item .menu-icon{
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    line-height: 40px;
+    text-align: center;
+  }
+
+  .sidebar .main-menu .sub-menu{
+    color: aliceblue;
+    margin-left: 20px;
+    border-left: 1px solid #666;
+    box-sizing: border-box;
+    padding-left: 30px;
+
+
+  }
+
+  .sidebar .main-menu .sub-menu a{
+    display: block;
+    margin: 5px 0;
+    font-weight: 500;
+    cursor: pointer;
+
+  }
+  .sidebar.inactive .main-menu .sub-menu{
+    display: none;
+  }
+
+  .sidebar-footer{
+    box-sizing: border-box;
+    width: 100%;
+    background: #333;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 20px;
+
+  }
+
+  .sidebar-footer .avatar{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    border-radius: 50%;
+  }
+  
+  .sidebar-footer .avatar img{
+    max-width: 100%;
+  }
+  .sidebar-footer .user-info{
+    display: inline-block;
+    margin: 0 10px;
+    color: #eee;
+  }
+
+  .sidebar-footer.inactive .user-info{
+    display: none;
+  }
+
+  .p-sub-menu.active{
+    display: none;
+  }
